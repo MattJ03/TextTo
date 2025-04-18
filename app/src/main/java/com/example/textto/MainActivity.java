@@ -13,6 +13,10 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.EditText;
+import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +27,18 @@ public class MainActivity extends AppCompatActivity {
 
         EditText username, password, time;
         Button logInBtn;
+        Handler getTime;
 
         password = findViewById(R.id.editTextTextPassword);
+        username = findViewById(R.id.usernameText);
         logInBtn = findViewById(R.id.button);
+        time = findViewById(R.id.editTextTime);
+
+        while(true) {
+            try {
+           LocalDateTime ldt = LocalDateTime.now();
+
+        }
 
 
     }
