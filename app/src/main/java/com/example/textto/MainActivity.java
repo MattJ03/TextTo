@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
         tocBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tocIntent = new Intent(MainActivity.this, )
+                Intent tocIntent = new Intent(MainActivity.this, TOC.class);
+                startActivity(tocIntent);
             }
         });
 

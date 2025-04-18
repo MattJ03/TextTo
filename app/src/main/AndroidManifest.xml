@@ -25,6 +25,9 @@
         <activity android:name=".Friends">
 
         </activity>
+        <activity android:name=".TOC">
+
+        </activity>
     </application>
 
 </manifest>
