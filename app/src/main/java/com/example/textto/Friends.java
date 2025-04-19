@@ -21,9 +21,20 @@ import android.content.Context;
 
 public class Friends extends AppCompatActivity {
 
+    EditText textMessage, textPhone;
+    Button buttonSend, buttonBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friends);
+
+        textPhone = findViewById(R.id.editTextPhone);
+        textMessage = findViewById(R.id.editTextMessage);
+        buttonSend = findViewById(R.id.buttonSend);
+        buttonBack = findViewById(R.id.buttonBack);
+
+
+
     }
 }
