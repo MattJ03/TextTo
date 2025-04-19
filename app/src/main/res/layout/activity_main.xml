@@ -5,7 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
+
+
 
     <Button
         android:id="@+id/button"
@@ -24,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Terms and Conditions"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,11 +42,13 @@
         android:layout_marginBottom="152dp"
         android:ems="10"
         android:hint="Password..."
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextUsername"
+        app:layout_constraintTop_toTopOf="@+id/usernameText"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
@@ -51,6 +57,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="time"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -63,6 +70,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Username"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="@+id/imageView2"
         app:layout_constraintRight_toRightOf="@+id/imageView2"
