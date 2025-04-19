@@ -3,6 +3,7 @@ package com.example.textto;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -38,9 +39,15 @@ public class Friends extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(textPhone.getText().toString().isEmpty() && !textMessage.getText().toString().isEmpty()) {
-                  Toast.makeText(Friends.this, "Enter a phone number", Toast.LENGTH_LONG).show();
+                  Toast.makeText(Friends.this, "Enter a phone number to send to", Toast.LENGTH_LONG).show();
                 } else if(!textPhone.getText().toString().isEmpty() && textMessage.getText().toString().isEmpty()) {
                     Toast.makeText(Friends.this, "Enter a message to send", Toast.LENGTH_LONG).show();
+                } else if(textPhone.getText().toString().isEmpty() && textMessage.getText().toString().isEmpty()) {
+                    Toast.makeText(Friends.this, "Enter phone number and message to send", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    intent.setData(Uri.parse("smsto:" + textPhone.getText().toString()));
+                    intent.putExtra("text", textMessage.getText().toString());
                 }
             }
         });
