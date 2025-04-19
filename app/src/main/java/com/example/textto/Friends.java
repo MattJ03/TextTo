@@ -48,8 +48,28 @@ public class Friends extends AppCompatActivity {
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("smsto:" + textPhone.getText().toString()));
                     intent.putExtra("text", textMessage.getText().toString());
+
+                    startActivity(intent);
+                    textPhone.setText("");
+                    textMessage.setText("");
+                    Toast.makeText(Friends.this, "Message Sent", Toast.LENGTH_LONG).show();
+                     Intent returnBackIntent = new Intent(Friends.this, MainActivity.class);
+                     startActivity(returnBackIntent);
+
                 }
+
+                buttonBack.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        textPhone.setText("");
+                        textMessage.setText("");
+                        Intent backIntent = new Intent(Friends.this, MainActivity.class);
+                        startActivity(backIntent);
+                    }
+                });
             }
+
+
         });
 
     }
