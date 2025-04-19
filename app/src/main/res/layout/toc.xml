@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/black"
     android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,6 +25,7 @@
         android:layout_width="330dp"
         android:layout_height="533dp"
         android:text="1. Introduction and General Provisions By accessing or using this application, the user agrees to be bound by the terms and conditions set forth herein. The app may update, modify, or replace these terms at any time without prior notice. Continued use of the app following such changes constitutes acceptance of the revised terms. Users are solely responsible for ensuring they have read and understood the most current version. The content provided is for general informational purposes only and does not constitute legal or professional advice.  2. User Responsibilities and Conduct Users agree to use this app only for lawful purposes and in a manner that does not infringe on the rights of, or restrict the use of, this service by others. Any misuse, including unauthorized access, distribution of harmful software, or attempts to reverse-engineer the app, is strictly prohibited. The user also agrees not to upload, share, or disseminate any content that is defamatory, obscene, or otherwise objectionable. Failure to comply may result in immediate termination of access.  3. Limitations of Liability The app is provided &quot;as is&quot; without warranty of any kind, either expressed or implied. Under no circumstances shall the developers or associated entities be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use the app. This includes, but is not limited to, loss of data, business interruption, or personal injury. Some jurisdictions do not allow certain limitations, so these may not apply in all cases."
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,4 +33,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.653"
         tools:text='1. Introduction and General Provisions By accessing or using this application, the user agrees to be bound by the terms and conditions set forth herein. The app may update, modify, or replace these terms at any time without prior notice. Continued use of the app following such changes constitutes acceptance of the revised terms. Users are solely responsible for ensuring they have read and understood the most current version. The content provided is for general informational purposes only and does not constitute legal or professional advice.  2. User Responsibilities and Conduct Users agree to use this app only for lawful purposes and in a manner that does not infringe on the rights of, or restrict the use of, this service by others. Any misuse, including unauthorized access, distribution of harmful software, or attempts to reverse-engineer the app, is strictly prohibited. The user also agrees not to upload, share, or disseminate any content that is defamatory, obscene, or otherwise objectionable. Failure to comply may result in immediate termination of access.  3. Limitations of Liability The app is provided "as is" without warranty of any kind, either expressed or implied. Under no circumstances shall the developers or associated entities be held liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use the app. This includes, but is not limited to, loss of data, business interruption, or personal injury. Some jurisdictions do not allow certain limitations, so these may not apply in all cases.' />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.951" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
