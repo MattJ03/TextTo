@@ -34,7 +34,16 @@ public class Friends extends AppCompatActivity {
         buttonSend = findViewById(R.id.buttonSend);
         buttonBack = findViewById(R.id.buttonBack);
 
-
+        buttonSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textPhone.getText().toString().isEmpty() && !textMessage.getText().toString().isEmpty()) {
+                  Toast.makeText(Friends.this, "Enter a phone number", Toast.LENGTH_LONG).show();
+                } else if(!textPhone.getText().toString().isEmpty() && textMessage.getText().toString().isEmpty()) {
+                    Toast.makeText(Friends.this, "Enter a message to send", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
 }
