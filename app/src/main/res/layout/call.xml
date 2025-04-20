@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/img_1" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextCallName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
