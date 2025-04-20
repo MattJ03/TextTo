@@ -24,6 +24,10 @@ public class Call extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if (ActivityCompat.checkSelfPermission(Call.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(Call.this, new String[]{Manifest.permission.CALL_PHONE}, CALL_PHONE_PERMISSIONS);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.call);
 
@@ -37,7 +41,7 @@ public class Call extends AppCompatActivity {
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (ActivityCompat.checkSelfPermission(Call.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
 
                     if (name.getText().toString().isEmpty() && !number.getText().toString().isEmpty()) {
                         Toast.makeText(Call.this, "Enter a name to send to", Toast.LENGTH_LONG).show();
@@ -50,9 +54,7 @@ public class Call extends AppCompatActivity {
                         intent.setData(Uri.parse("tel:" + number.getText().toString()));
                         startActivity(intent);
                     }
-                } else {
-                    ActivityCompat.requestPermissions(Call.this, new String[]{Manifest.permission.CALL_PHONE}, CALL_PHONE_PERMISSIONS);
-                }
+
             }
         });
 
