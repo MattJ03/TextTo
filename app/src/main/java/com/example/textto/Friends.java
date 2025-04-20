@@ -38,14 +38,14 @@ public class Friends extends AppCompatActivity {
                 } else {
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("smsto:" + textPhone.getText().toString()));
-                    intent.putExtra("text", textMessage.getText().toString());
+                    intent.putExtra("sms_body", textMessage.getText().toString());
 
                     startActivity(intent);
                     textPhone.setText("");
                     textMessage.setText("");
                     Toast.makeText(Friends.this, "Message Sent", Toast.LENGTH_LONG).show();
                      Intent returnBackIntent = new Intent(Friends.this, MainActivity.class);
-                     startActivity(returnBackIntent);
+
 
                 }
             }

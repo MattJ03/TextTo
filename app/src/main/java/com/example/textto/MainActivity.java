@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 if(username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Either or both fields are empty", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(MainActivity.this, Friends.class);
+                    Intent intent = new Intent(MainActivity.this, Choose.class);
                     startActivity(intent);
                 }
             }
