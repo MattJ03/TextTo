@@ -10,7 +10,21 @@ import android.content.Intent;
 
 public class Choose extends AppCompatActivity {
 
+    ImageView call, message;
+    Button backButton;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.choose);
+
+        call = findViewById(R.id.imageViewCall);
+        message = findViewById(R.id.imageViewMessage);
+        backButton = findViewById(R.id.chooseBackBtn);
+
+        ;
+
+
+
+
     }
 }
