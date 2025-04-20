@@ -57,19 +57,17 @@ public class Friends extends AppCompatActivity {
                      startActivity(returnBackIntent);
 
                 }
-
-                buttonBack.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        textPhone.setText("");
-                        textMessage.setText("");
-                        Intent backIntent = new Intent(Friends.this, MainActivity.class);
-                        startActivity(backIntent);
-                    }
-                });
             }
+        });
 
-
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textMessage.setText("");
+                textPhone.setText("");
+                Intent backIntent = new Intent(Friends.this, MainActivity.class);
+                startActivity(backIntent);
+            }
         });
 
     }

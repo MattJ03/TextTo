@@ -28,6 +28,9 @@
         <activity android:name=".TOC">
 
         </activity>
+        <activity android:name=".Choose">
+
+        </activity>
     </application>
 
 </manifest>
